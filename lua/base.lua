@@ -55,3 +55,9 @@ vim.opt.backspace = 'start,eol,indent'
 vim.opt.path:append { '**' }
 vim.opt.wildignore:append { '*/node_modules/*' }
 
+-- sounds
+-- Enable visual feedback
+vim.o.visualbell = true
+-- Disable error bells
+vim.o.errorbells = false
+

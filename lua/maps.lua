@@ -32,3 +32,6 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+-- Disable Ctrl-a for select all
+keymap.set('n', '<C-a>', '<C-a>', { noremap = true, silent = true })
