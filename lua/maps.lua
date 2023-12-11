@@ -35,3 +35,10 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- Disable Ctrl-a for select all
 keymap.set('n', '<C-a>', '<C-a>', { noremap = true, silent = true })
+
+-- Move line
+keymap.set('n', '<C-j>', ':m +1<CR>')
+keymap.set('n', '<C-k>', ':m -2<CR>')
+keymap.set('i', '<C-j>', '<Esc>:m +1<CR>gi')
+keymap.set('i', '<C-k>', '<Esc>:m -2<CR>gi')
+

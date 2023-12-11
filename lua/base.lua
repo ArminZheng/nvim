@@ -61,3 +61,5 @@ vim.o.visualbell = true
 -- Disable error bells
 vim.o.errorbells = false
 
+-- auto save
+-- vim.o.autowriteall = true
