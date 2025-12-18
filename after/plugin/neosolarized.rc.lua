@@ -15,10 +15,11 @@ Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
 Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
 Group.new('Visual', colors.none, colors.base03, styles.reverse)
 
-local cError = groups.Error.fg
-local cInfo = groups.Information.fg
-local cWarn = groups.Warning.fg
-local cHint = groups.Hint.fg
+-- 这里的索引名称需要改为 Neovim 现代标准的名称
+local cError = (groups.DiagnosticError or groups.Error or {}).fg or colors.red
+local cWarn  = (groups.DiagnosticWarn  or groups.Warning or {}).fg or colors.yellow
+local cInfo  = (groups.DiagnosticInfo  or groups.Information or {}).fg or colors.blue
+local cHint  = (groups.DiagnosticHint  or groups.Hint or {}).fg or colors.cyan
 
 Group.new("DiagnosticVirtualTextError", cError, cError:dark():dark():dark():dark(), styles.NONE)
 Group.new("DiagnosticVirtualTextInfo", cInfo, cInfo:dark():dark():dark(), styles.NONE)
